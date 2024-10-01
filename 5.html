@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+	<html>
+		<head>        
+			<link rel="stylesheet" href="/home/zoiadmin/Documents/Sunny/project/task5/asset/bootstrap/bootstrap.min.css">   
+	      		<link rel="stylesheet" href="/home/zoiadmin/Documents/Sunny/project/task5/asset/jquery/jquery-ui.css">
+		</head>    
+		<body>           
+		 	<div class="mainbody m-auto">            
+				<div class="border">                
+		 			<div class="row">                   
+		 	 <h4>Client Info </h4>                    
+		  	<div class="col-3">                          
+		   		<label>Title <span style="color:red;">*</span></label><br>                       
+		    		<select name="Title" class="form-control" id="txt_name" Required>                            
+		    		<option value="">-select-</option>                            
+		    		<option value="Mr.">MR</option>                            
+		    		<option value="Miss.">MISS</option>                            
+		    		<option value="Mrs.">MRS</option>                            
+		    		<option value="Ms.">MS</option>                                
+		    		</select>                       
+		     		<span id="spn_title_error" class="spn-error"></span>                     
+		      	 </div>                                      
+		         <div class="col-3">                            
+		        	 <label>First Name <span style="color:red;">*</span></label>                      
+		         	 <input type="text" class="form-control " placeholder="First Name" id="txt_FirstName" Required>                   
+		               	 <span id="spn_firstName_error"></span>                
+		          </div>
+
+                    <div class="col-3">                         
+                       		<label>Middle Name</label>                       
+                        	<input type="text" class="form-control" placeholder="Middle Name" id="txt_middleName">                 
+                     </div>
+
+                    <div class="col-3">                            
+                    		<label>Last Name <span style="color:red;">*</span></label>                      
+                     		 <input type="text" class="form-control" placeholder="Last Name" id="txt_lastName" Required>          
+                                    <span id="spn_lastName_error"></span>               
+                        </div>            
+                                         
+                                             </div>    
+
+                <div class="row">                 
+                   <div class="col-3">                          
+                    <label>Short Name <span style="color:red;">*</span></label>                     
+                       <input type="text" class="form-control" placeholder="Short Name" id="txt_shortName" Required>         
+                                      <span id="spn_shortName_error"></span>                     
+                                        </div>                                
+                                                <div class="col-3">           
+                                                                 <label>Occupation</label>       
+                                                                           <select name="Title" class="form-control" placeholder="Occupation" id="ddl_Occupation">               
+                                                                                               <option value="-select-">-select-</option>  
+                                                                                               <option value="BUSINESS">BUSINESS</option>                         
+                                                                                               <option value="SERVICE">SERVICE</option>                          
+                                                                                   		<option value="PROFESSIONAL">PROFESSIONAL</option>                          
+                                                                                      		 <option value="AGRICULTURIST">AGRICULTURIST</option>                           
+                                                                                        	<option value="RETIRED">RETIRED</option>                       
+                                                                                        	 </select>                   
+                                                                                         	 </div>
+
+                   	 <div class="col-3">                         
+                       		<label>Gender <span style="color:red;">*</span></label><br>    
+                                <select name="Title" class="form-select" id="ddl_Gender" Required>          
+                                <option value="">-select-</option>        
+                                <option value="Male">Male</option> 
+                                <option value="Female">Female</option>                     
+                                <option value="Transgender">Transgender</option>                            
+                                <option value="Other">Other</option>    
+                                </select>  
+                               <span id="spn_gender_error"></span>                    
+                               </div>
+
+                       	<div class="col-3">                            
+                       	<label>DOB <span style="color:red;">*</span></label><Div>                        
+                       	<input type="text" id="date" class="form-control" Required>                        
+                       	<span id="spn_date_error"></span>                    
+                       	</div>                
+                       	</div>    
+                      	 <div class="col-3">                           
+                      	 <label>Mobile Number <span style="color:red;">*</span></label>                        
+                      	 <input type="number" id="txt_mobile" class="form-control" placeholder="Mobile Number" Required>                        
+                      	 <span id="spn_mobile_error"></span>                      
+                      	  </div>                                        
+                      	  <div class="col-3">                            
+                      	  <label>Email ID <span style="color:red;">*</span></label>                        
+                      	  <input type="email" class="form-control" placeholder="Email ID" id="txt_email" Required>                        
+                      	  <span id="spn_email_error"></span>                    
+                      	  </div>
+
+                   	<div class="col-3 m-auto">                        
+                   	<input class="form-check-input" type="checkbox" id="gridCheck" Required>                        
+                   	<label class="form-check-label" for="gridCheck">                        Active                        </label>                        
+                   	<span id="spn_checkBox_error"></span>                   
+                   	 </div>
+
+                           <div class="col-3 reset-add-button m-auto">                        
+                           <input type="button" class="form-control btn-danger" value="Reset" id="btn_Reset"/>                        
+                           <input type="button" class="form-control btn-primary" value="Add"  id="btn_Add"/>                        
+                           <input type="button" class="form-control btn-success" value="Update"  id="btn_Update" style="display:none;"/>                   
+                            </div>                
+                            </div>            
+                            </div>        
+                            </div>
+
+       			<div class="container">          
+       			<table class="table table-bordered" >               
+       			 <thead>                    
+       			 <tr>                    
+       			 <th class="name">Name</th>                   
+       			  <th class="Occupation">Occupation</th>                   
+       			   <th class="Gender">Gender</th>                   
+       			    <th class="DOB">DOB</th>                    
+       			    <th class="mobile">Mobile</th>                    
+       			    <th class="email">Email</th>                  
+       			      <th>Status</th>                   
+       			       <th>Edit</th>                       
+       			        <th>Delete</th>                               
+       			         </tr>               
+       			          </thead>
+
+               <tbody id="Add">
+
+               </tbody>            
+               </table>        
+               </div>
+
+   </body>
+</html>
+<script>
+
+var currentRow;   
+ var inEdit = true;
+
+    $("#btn_Add").click(function(){   //add function        
+    if(inEdit==true){                       
+     var name=$("#txt_name").val();            
+     var FirstName=$("#txt_FirstName").val();           
+      var middleName=$("#txt_middleName").val();           
+       var lastName=$("#txt_lastName").val();           
+        var shortName=$("#txt_shortName").val();           
+         var Occupation=$("#ddl_Occupation").val();           
+          var Gender=$("#ddl_Gender").val();            
+          var DOB=$("#date").val();          
+            var Mobile=$("#txt_mobile").val();           
+             var Email=$("#txt_email").val();            
+             var Status=$("#gridCheck").val();                       
+              var errorName = $(".spn-error").html();                        
+              if (errorName==""){           
+               $("#Add").append("<tr><td class='tr_name'>"+name+""+FirstName+"<br>"+middleName+"<br>"+lastName+"("+shortName+")</td><td                 class='tr_Occupation'>"+Occupation+"</td><td class='tr_Gender'>"+Gender+"</td><td class='tr_DOB'>"+DOB+"</td><td class='tr_Mobile'>"+Mobile+"</td><td                 class='tr_Email'>"+Email+"</td><td><label>Active</label><td><input type='button' data-toggle='modal' Class='btn-edit' data-target='#myModal'                 value='Edit'/></td><td><input type='button' class='btn_delete' value='Delete'/></td></tr>");           
+                $("#txt_name").val("");            
+                $("#txt_FirstName").val("");            
+                $("#txt_middleName").val("");           
+                $("#txt_lastName").val("");            
+                $("#txt_shortName").val("");            
+                $("#ddl_Occupation").val("");            
+                $("#ddl_Gender").val("");            
+                $("#date").val("");            
+                $("#txt_mobile").val("");            
+                $("#txt_email").val("");            
+                $("#gridCheck").val("");            
+                $("#txt_Gender").val("");            
+                }        
+                }else{            
+                var name=$("#txt_name").val();            
+                var FirstName=$("#txt_FirstName").val();            
+                var middleName=$("#txt_middleName").val();           
+                 var lastName=$("#txt_lastName").val();           
+                  var shortName=$("#txt_shortName").val();           
+                   var Occupation=$("#ddl_Occupation").val();            
+                   var Gender=$("#ddl_Gender").val();            
+                   var DOB=$("#date").val();            
+                   var Mobile=$("#txt_mobile").val();            
+                   var Email=$("#txt_email").val();            
+                   var Status=
+("#gridCheck").val();           
+ currentRow.find(".tr_name").text(name);            
+ currentRow.find(".tr_Occupation").text(Occupation);            
+ currentRow.find(".tr_Gender").text(Gender);            
+ currentRow.find(".tr_DOB").text(DOB);            
+ currentRow.find(".tr_Mobile").text(Mobile);           
+ currentRow.find(".tr_Email").text(Email);            
+ inEdit = false;            
+ currentRow = null;       
+  }    
+  });
+    
+
+
+$("#btn_Reset").click(function(){ //reset button        
+$("#txt_name").val("");       
+ $("#txt_FirstName").val("");       
+  $("#txt_middleName").val("");        
+  $("#txt_lastName").val("");        
+  $("#txt_shortName").val("");        
+  $("#ddl_Occupation").val("");        
+  $("#ddl_Gender").val("");        
+  $("#date").val("");        
+  $("#txt_mobile").val("");       
+   $("#txt_email").val("");        
+   $("#gridCheck").val("");        
+   $("#txt_Gender").val("");   
+    });
+
+   $(document).on("click",".btn-edit",function(){//edit button        
+   inEdit = false;        
+   var collectData=$(this).parent().parent();        
+   currentRow=collectData;        
+   var name = collectData.find(".tr_name").text()        
+   $("#txt_name").val(name);       
+    var FirstName = collectData.find("FirstName").text()       
+     $("#txt_FirstName").val(FirstName);       
+      var middleName = collectData.find("middleName").text()        
+      $("#txt_middleName").val(middleName);       
+       var lastName = collectData.find("lastName").text()        
+       $("#txt_lastName").val(lastName);        
+       var shortName = collectData.find("shortName").text()       
+        $("#txt_shortName").val(shortName);        
+        var Occupation = collectData.find(".tr_Occupation ").text()        
+        $("#ddl_Occupation").val(Occupation);        
+        var Gender = collectData.find(".tr_Gender").text()       
+         $("#ddl_Gender").val(Gender);        
+         var dob = collectData.find(".tr_DOB").text()        
+         $("#date").val(dob);       
+          var mobile = collectData.find(".tr_Mobile").text()       
+           $("#txt_mobile").val(mobile);        
+           var email = collectData.find(".tr_Email").text()        
+           $("#txt_email").val(email);    
+           });
+
+   $("#date").datepicker(
+   {//date textbox        
+   changeYear:true,        
+   changeMonth:true,        
+   minDate:"-18Y"    
+   });    
+
+   var Occupation=["BUSINESS","SERVICE","PROFESSIONAL","AGRICULTURIST","RETIRED"];//Occupation textbox       
+    $("#ddl_Occupation").autocomplete(
+    {      
+      source : Occupation   
+       });
+
+   $(document).on("click",".btn_delete",function()
+   {//delete button       
+    $(this).parent().parent().remove();    });
+
+    
+
+</script>
+</body>
+</html>
+
+

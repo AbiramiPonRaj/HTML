@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+		<script src="/home/zoi-admin/Documents/Abirami/Test No:5/jquery-3.6.0.min.js"></script>
+		<link rel="stylesheet" href="/home/zoi-admin/Documents/Abirami/Test No:5/bootstrap.min.css"></script>
+		
+		</head>
+			<body>
+				<form>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-3">
+								<h3>Client Info</h3>
+								<label>Title</label>
+								<select>
+								<option>Mr</option>
+								<option>Mrs</option>
+								<option>Ms</option>
+								</select>
+							    </label>First Name</label>
+								<input type="text" id="txt_firstname"/>
+								</label>Middle Name</label>
+								<input type="text" id="txt_middlename"/>
+								<label>Last Name</label>
+								<input type="text" id="txt_lastname"/>
+						    </div>
+					    </div>
+					        <div>
+							 <div class="col-sm-3">
+								<label>Short Name</label>
+								<input type="text" id="txt_shortname"/>
+								<label>Occupation</label>
+								<label>Gender</label>
+								<select>
+								<option>Male</option>
+								<option>Female</option>
+								<option>Other</option>
+								</select>
+								<label>DOB</label>
+								<input type="date" id="txt_dob"/>
+								</div>
+					    		 </div>
+					    	</div>
+					
+							<div class="col-sm-3">
+								<label>Mobile Number</label>
+								<input type="Number" id="txt_mobilenumber"/>
+								<label>Email Id<label>
+								<input type="email" id="txt_emailid"/>
+							</div>	
+						
+                    </div>	
+								
+								
+								
+			
+				</form>
+	</html>		

@@ -1,0 +1,188 @@
+ <!DOCTYPE html>
+    <html>
+      <head>
+
+        <center><h1>Bank Registration Form</h1>  </center>
+         <link rel="stylesheet" href="/home/zoi-admin/Documents/Abirami/Test No:3/Bank Reg.css"/>
+      </head>
+     <body>
+           <form class="formsheet">
+           <fieldset>
+                <div class="uname">
+                       <lable><b>User Name <span class="error">*</span></b></lable>
+                   <input type="text" id="txt_uname" class="uname" minlength="3" maxlength="75" onkeyPress="allowAlpha(event)" required/>
+        </div>
+
+         <div class="Email">
+                  <lable><b>Email ID <span class="error">*</span></b></lable>
+                 <input type="email" id="txt_emailid" class="emailid" maxlength="100" required/>
+        </div>
+
+        <div class="mobile">
+                 <lable><b>Mobile Number <span class="error">*</span></b></lable>
+                 <input type="text" id="txt_mobile" value="9"  class="mobile number" maxlength="10" required/>
+        </div>
+
+        </div class="gender">
+                <lable><b>Gender <span class="error">*</span></b></lable>
+                 <input type="radio" id="rb_male" name="gender"  class="rb-gender"   value="male" checked/>
+                 <lable>Male</lable>
+                 <input type="radio" id="rb_female" name="gender" class="rb-gender" value="female"/>
+                 <lable>Female</lable>
+                 <input type="radio" id="rb_others" name="gender" class="rb-gender" value="others"/>
+                 <lable>Others</lable>
+        </div>
+        <div class="dob">
+                  <lable><b>DOB</b></lable>
+                 <input type="date" id="date_dob"/>
+        </div>
+
+        <div class="accountnum">
+                 <lable><b>Bank Account Number</b></lable>
+                 <input type="text" id="txt_accountno" class="accountNo" onkeyPress="allowNumeric(event)" maxlength="20"/>
+        </div>  
+
+        <div class="ifsc">
+                 <lable><b>IFSC code</b></lable>
+                 <input type="text" id="txt_ifsccode" onkeyPress="allowNumeric(event)"/>
+        </div>
+
+        <div class="bank">
+              <lable><b>Bank</b></lable>
+                   <select id="ddl_bank">
+
+                      <option>-Select-</option>
+                     <option>HDFC Bank</option>
+                      <option>SBI Bank</option>
+                      <option>Indian Bank</option>
+                      <option>IOB Bank</option>
+                      <option>TMB Bank</option>
+                      <option>ICIC Bank</option>
+                      <option>Axis Bank</option>
+                </select>
+        </div>
+
+        <div class="branch">
+             <lable><b>Branch</b></lable>
+                   <select id="ddl_branch">
+                      <option>-Select-</option>
+                      <option>Tirunelveli</option>
+                      <option>Tuticorin</option>
+                      <option>Tirunelveli</option>
+                      <option>Tenkasi</option>
+                      <option>Kanyakumari</option>
+                      <option>Mumbai</option>
+                   </select>  
+           <div class="document" id="cb_docprovider">
+                    <lable><b>Document Provided</b></lable>
+                     <input type="checkbox" id="cb_document1"                        value="Adhar No"/>
+                     <lable>Adhar</lable></div>
+                     <div class="pan"><input type="checkbox" id="cb_document2"        value="PAN"/>
+                     <lable>PAN</alble></div>
+                     <div class="card"><input type="checkbox" id="cb_document3"        value="Ration Card"/>
+                     <lable>Ration Card</alble></div>
+                     <div class="voter"><input type="checkbox" id="cb_document4"        value="Voter"/>
+                     <lable>VoterID</alble></div>
+                     <div>
+                     <input type="button" id="btn_Submit" value="submit"/>
+                     <lable>Submit</lable>
+
+                     </div>
+           </div>
+</fieldset>
+    <table>                <thead>
+    <table>
+                   <thead>
+                     <tr>
+                    <th>User Name</th>
+                    <th>Email Id</th>
+                    <th>Mobile Number</th>
+                    <th>Gender</th>
+                    <th>DOB</th>
+                            <th>Bank Account Number</th>
+                    <th>IFSC Code</th>
+                    <th>Bank</th>
+                    <th>Branch</th>
+                    <th>Document Provided</th>
+               </thead>
+
+
+                 <tbody>
+                     <span><td id="td_UserName"></td></span>
+                      <td id="td_email"></td>
+                      <td id="td_mobilenum"></td>
+                      <td id="td_male"></td>
+                      <td id="td_dob"></td>
+                         <td id="td_accountnum"></td>
+                      <td id="td_ifsccode"></td>
+                      <td id="td_bank"></td>
+                           <td id="td_branch"></td>
+                      <td id="td_Adhar"></td>
+                  </tbody>    
+            </table>          
+
+
+
+
+        </form>
+              
+    <script type="text/javascript">
+
+
+
+                 function allowNumeric(event){
+      var keycode=event.keyCode;
+       if(keycode>=48&&keycode<=57){
+       return true;
+      }
+      else{
+      event.preventDefault();
+      }
+     }
+
+              document.getElementById("btn_Submit").onclick=function(){
+                        var a = document.getElementById("txt_uname").value;
+                        document.getElementById("td_UserName").innerHTML=a;
+
+                        var b = document.getElementById("txt_emailid").value;
+                        document.getElementById("td_email").innerHTML=b;
+
+                        var c = document.getElementById("txt_mobile").value;
+                        document.getElementById("td_mobilenum").innerHTML=c;
+
+                        var h = document.getElementById("date_dob").value;
+                        document.getElementById("td_dob").innerHTML=h;
+
+
+                        var g = document.getElementById("rb_male").value;
+                        document.getElementById("td_male").innerHTML=g;
+
+                        var f= document.getElementById("date_dob").value;
+                        document.getElementById("td_ifsccode").innerHTML=f;
+
+                        var d= document.getElementById("txt_accountno").value;
+                        document.getElementById("td_accountnum").innerHTML=d;
+
+                        var j= document.getElementById("ddl_bank").value;
+                        document.getElementById("td_bank").innerHTML=j;
+
+                         var k= document.getElementById("ddl_branch").value;
+                        document.getElementById("td_branch").innerHTML=k;
+
+
+                        var i = document.getElementById("cb_document").value;
+                        document.getElementById("td_Adhar").innerHTML=i;
+
+                }
+
+
+
+                 </script>    
+
+        </body>
+    </html>
+
+     
+
+
+
